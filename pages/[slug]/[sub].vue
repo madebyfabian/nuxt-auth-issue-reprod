@@ -1,7 +1,7 @@
 <template>
   <div>
     <h1 class="text-4xl">
-      Secret!
+      Public. ([slug]/[sub].vue])
     </h1>
   </div>
 </template>

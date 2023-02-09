@@ -8,6 +8,7 @@ export default defineNuxtConfig({
     shim: false
   },
   auth: {
+    enableGlobalAppMiddleware: true,
     origin: process.env.NODE_ENV === 'production' ? 'https://nuxt-auth-issue-reprod.vercel.app' : 'http://localhost:3000'
   }
 })
