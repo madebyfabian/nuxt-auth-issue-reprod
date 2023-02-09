@@ -5,13 +5,16 @@
     </h1>
     <p>
       Checkout the page protected by `nuxt-auth` here:
-      <nuxt-link to="/protected" class="underline text-blue">
-        Click me to test the auth setup!
-      </nuxt-link>
     </p>
+    <pre>signed in? {{ data }}</pre>
+    <button v-if="data" class="rounded-xl shadow-xl p-2 m-2" @click="signOut()">
+      sign out
+    </button>
   </div>
 </template>
 
 <script setup lang="ts">
 definePageMeta({ middleware: 'auth' })
+
+const { data, signOut } = useSession()
 </script>

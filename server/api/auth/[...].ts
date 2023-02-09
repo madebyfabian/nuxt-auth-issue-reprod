@@ -2,6 +2,10 @@ import CredentialsProvider from 'next-auth/providers/credentials'
 import { NuxtAuthHandler } from '#auth'
 
 export default NuxtAuthHandler({
+  pages: {
+    // Change the default behavior to use `/login` as the path for the sign-in page
+    signIn: '/login'
+  },
   secret: 'secret',
   // TODO: ADD YOUR OWN AUTHENTICATION PROVIDER HERE, READ THE DOCS FOR MORE: https://sidebase.io/nuxt-auth
   providers: [
