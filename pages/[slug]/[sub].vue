@@ -7,5 +7,5 @@
 </template>
 
 <script setup lang="ts">
-definePageMeta({ auth: false })
+definePageMeta({ auth: false, middleware: undefined })
 </script>
